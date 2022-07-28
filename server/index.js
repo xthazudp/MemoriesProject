@@ -14,6 +14,9 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.get('/', (req, res) => {
+  res.send('Hello to Memories API !!');
+});
 
 // const CONNECTION_URL =
 //   'mongodb+srv://xthazudp:memoryproject123@cluster0.90pix.mongodb.net/?retryWrites=true&w=majority';
